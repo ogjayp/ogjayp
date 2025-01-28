@@ -1,101 +1,174 @@
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { Button } from "@/components/ui/button"
+import { Instagram, Linkedin, Mail, Twitter } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { ibmPlexMono } from "@/app/_app"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-export default function Home() {
+export default function Portfolio() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col md:flex-row min-h-screen w-full bg-[#fffcf5]">
+      {/* Left scrollable area */}
+      <ScrollArea className="w-full md:w-1/2 h-auto md:h-screen order-2 md:order-1 bg-transparent">
+        <div className="p-8 space-y-8">
+          <div className="group relative">
+            <div className="relative h-[280px] rounded-lg overflow-hidden">
+              <Image
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
+                alt="Medical research project"
+                fill
+                className="object-cover transition-all group-hover:blur-sm"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Website Design
+                  </Badge>
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Webflow Development
+                  </Badge>
+                </div>
+                <p className="text-2xl font-semibold mt-auto">
+                  Custom single-page marketing website for an advanced LLM-guided medical chart abstraction product
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="group relative">
+            <div className="relative h-[280px] rounded-lg overflow-hidden">
+              <Image
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
+                alt="Email platform project"
+                fill
+                className="object-cover transition-all group-hover:blur-sm"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Brand Design
+                  </Badge>
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Website Design
+                  </Badge>
+                </div>
+                <p className="text-2xl font-semibold mt-auto">
+                  Beautifully crafted email marketing platform with modern design system
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <div className="relative h-[280px] rounded-lg overflow-hidden">
+              <Image
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
+                alt="Vietnamese food project"
+                fill
+                className="object-cover transition-all group-hover:blur-sm"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Website Design
+                  </Badge>
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Development
+                  </Badge>
+                </div>
+                <p className="text-2xl font-semibold mt-auto">Modern restaurant website with online ordering system</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </ScrollArea>
+
+      {/* Right fixed sidebar */}
+      <div className="w-full md:w-1/2 md:h-screen md:sticky md:top-0 p-8 flex flex-col order-1 md:order-2">
+        <div className="space-y-8">
+          <div className="">
+            <div className="relative w-32 h-32 mb-6">
+              <Image src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQ912M4xnABscO4Ckn2uw0QqFYIt6NpodWXzmE" alt="Profile photo" fill className="rounded-full object-cover" />
+            </div>
+            <h1 className="text-3xl font-semibold">John Sanchez</h1>
+            <p className="text-muted-foreground">Web Designer & Developer</p>
+          </div>
+
+          <p className="text-muted-foreground">
+            I work with entrepreneurs, marketing teams, and brand designers to create custom marketing websites for
+            businesses across industries.
+          </p>
+
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="work">
+              <AccordionTrigger>Work Inquiries</AccordionTrigger>
+              <AccordionContent>
+                Here you can find information about my work and how to get in touch for potential projects.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="about">
+              <AccordionTrigger>About Me</AccordionTrigger>
+              <AccordionContent>
+                Learn more about my background, skills, and experience in web design and development.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="testimonials">
+              <AccordionTrigger>Testimonials</AccordionTrigger>
+              <AccordionContent>
+                Read what my clients have to say about working with me on various projects.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="brands">
+              <AccordionTrigger>Brands I&apos;ve Worked With</AccordionTrigger>
+              <AccordionContent>
+                Explore the list of brands and companies I&apos;ve collaborated with on successful projects.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          <div className="flex gap-4 pt-4">
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://x.com/ogjaypee">
+                <Twitter className="w-5 h-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://www.linkedin.com/in/johnp-sanchez">
+                <Linkedin className="w-5 h-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://www.instagram.com/ogjayp/">
+                <Instagram className="w-5 h-5" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="mailto:originaljayp@gmail.com">
+                <Mail className="w-5 h-5" />
+                <span className="sr-only">Email</span>
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+      {/* Floating badge */}
+      <div className="fixed bottom-6 right-6 md:bottom-6 md:right-6">
+        <Badge
+          variant="secondary"
+          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-700 text-white`}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          @ogjayp
+        </Badge>
+      </div>
     </div>
-  );
+  )
 }
+
