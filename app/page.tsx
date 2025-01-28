@@ -13,7 +13,7 @@ export default function Portfolio() {
       {/* Left scrollable area */}
       <ScrollArea className="w-full md:w-1/2 h-auto md:h-screen order-2 md:order-1 bg-transparent">
         <div className="p-8 space-y-8">
-          <div className="group relative">
+          <div className="group relative p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
@@ -38,7 +38,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="group relative">
+          <div className="group relative p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
@@ -63,7 +63,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="group relative">
+          <div className="group relative p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
