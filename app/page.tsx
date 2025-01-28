@@ -14,7 +14,7 @@ export default function Portfolio() {
       <ScrollArea className="w-full md:w-1/2 h-auto md:h-screen order-2 md:order-1 bg-transparent">
         <div className="p-8 space-y-8">
           <div className="group relative">
-            <div className="relative h-[280px] rounded-lg overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
                 alt="Medical research project"
@@ -39,7 +39,7 @@ export default function Portfolio() {
           </div>
 
           <div className="group relative">
-            <div className="relative h-[280px] rounded-lg overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
                 alt="Email platform project"
@@ -64,7 +64,7 @@ export default function Portfolio() {
           </div>
 
           <div className="group relative">
-            <div className="relative h-[280px] rounded-lg overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
                 alt="Vietnamese food project"
