@@ -17,7 +17,7 @@ export default function Portfolio() {
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
-                alt="Medical research project"
+                alt="Project: Zero Impact Energy"
                 fill
                 className="object-cover transition-all group-hover:blur-sm"
               />
@@ -31,8 +31,8 @@ export default function Portfolio() {
                     Webflow Development
                   </Badge>
                 </div>
-                <p className="text-2xl font-semibold mt-auto">
-                  Custom single-page marketing website for an advanced LLM-guided medical chart abstraction product
+                <p className="text-lg md:text-2xl font-semibold mt-auto">
+                  Design and development of a 20+ page marketing website for Zero Impact Energy.
                 </p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Portfolio() {
                     Website Design
                   </Badge>
                 </div>
-                <p className="text-2xl font-semibold mt-auto">
+                <p className="text-lg md:text-2xl font-semibold mt-auto">
                   Beautifully crafted email marketing platform with modern design system
                 </p>
               </div>
@@ -81,7 +81,7 @@ export default function Portfolio() {
                     Development
                   </Badge>
                 </div>
-                <p className="text-2xl font-semibold mt-auto">Modern restaurant website with online ordering system</p>
+                <p className="text-lg md:text-2xl font-semibold mt-auto">Modern restaurant website with online ordering system</p>
               </div>
             </div>
           </div>
@@ -95,8 +95,11 @@ export default function Portfolio() {
             <div className="relative w-32 h-32 mb-6">
               <Image src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQ912M4xnABscO4Ckn2uw0QqFYIt6NpodWXzmE" alt="Profile photo" fill className="rounded-full object-cover" />
             </div>
-            <h1 className="text-3xl font-semibold">John Sanchez</h1>
-            <p className="text-muted-foreground">Web Designer & Developer</p>
+            <h1 className="text-3xl font-semibold flex items-center gap-2">
+              John Sanchez
+              <span className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>aka JP</span>
+            </h1>
+            <p className="text-muted-foreground">Web Designer & Next.js Developer</p>
           </div>
 
           <p className="text-muted-foreground">
@@ -123,12 +126,7 @@ export default function Portfolio() {
                 Read what my clients have to say about working with me on various projects.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="brands">
-              <AccordionTrigger>Brands I&apos;ve Worked With</AccordionTrigger>
-              <AccordionContent>
-                Explore the list of brands and companies I&apos;ve collaborated with on successful projects.
-              </AccordionContent>
-            </AccordionItem>
+            
           </Accordion>
 
           <div className="flex gap-4 pt-4">
