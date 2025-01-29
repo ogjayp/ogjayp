@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -6,8 +8,41 @@ import { Instagram, Linkedin, Mail, Twitter } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono } from "@/app/_app"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Card, CardContent } from "@/components/ui/card"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react"
+
+// Add this testimonial data near the top of the file, before the Portfolio component
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO, TechStart",
+    content: "JP delivered exceptional results for our website redesign. His expertise in Next.js and attention to detail made the entire process smooth and efficient.",
+  },
+  {
+    name: "Michael Chen",
+    role: "Founder, EcoCharge",
+    content: "Working with JP was a game-changer for our platform. His understanding of both design and development helped us create a seamless user experience.",
+  },
+  {
+    name: "Rick M.",
+    role: "Founder, American Republic Metals",
+    content: "JP's ability to translate our vision into reality was impressive. His technical skills and communication made the project a success.",
+  },
+]
 
 export default function Portfolio() {
+  // Add this state near the top of the component
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  }
+
+  const previousTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen w-full bg-[#fffcf5]">
       {/* Left scrollable area */}
@@ -130,7 +165,34 @@ export default function Portfolio() {
             <AccordionItem value="testimonials">
               <AccordionTrigger className="text-lg font-semibold">Testimonials</AccordionTrigger>
               <AccordionContent>
-                Read what my clients have to say about working with me on various projects.
+                <div className="relative">
+                  <Card className="bg-emerald-800 text-white">
+                    <CardContent className="pt-6">
+                      <p className="text-white mb-4">{testimonials[currentTestimonial].content}</p>
+                      <div className="font-semibold">{testimonials[currentTestimonial].name}</div>
+                      <div className="text-sm text-gray-300">{testimonials[currentTestimonial].role}</div>
+                    </CardContent>
+                  </Card>
+                  <div className="flex justify-between mt-4">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={previousTestimonial}
+                      
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                      <span className="sr-only">Previous testimonial</span>
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={nextTestimonial}
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                      <span className="sr-only">Next testimonial</span>
+                    </Button>
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
