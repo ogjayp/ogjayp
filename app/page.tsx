@@ -15,12 +15,14 @@ export default function Portfolio() {
         <div className="p-8 space-y-8">
           <div className="group relative p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
-              <Image
-                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
-                alt="Project: Zero Impact Energy"
-                fill
-                className="object-cover transition-all group-hover:blur-sm"
-              />
+              
+                <Image
+                  src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
+                  alt="Project: Zero Impact Energy"
+                  fill
+                  className="object-cover object-top transition-all group-hover:blur-sm"
+                />
+              
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex gap-2 mb-4">
@@ -44,7 +46,7 @@ export default function Portfolio() {
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
                 alt="Email platform project"
                 fill
-                className="object-cover transition-all group-hover:blur-sm"
+                className="object-cover object-top transition-all group-hover:blur-sm"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -69,7 +71,7 @@ export default function Portfolio() {
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQxNzfXrgsO0m3I1MibUtCpu4WLf7aXkZqT6jY"
                 alt="Project: American Republic Metals"
                 fill
-                className="object-cover transition-all group-hover:blur-sm"
+                className="object-cover object-top transition-all group-hover:blur-sm"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -81,7 +83,9 @@ export default function Portfolio() {
                     Development
                   </Badge>
                 </div>
-                <p className="text-lg md:text-2xl font-semibold mt-auto">Managed design process and developed marketing/sales integrations for a seamless lead-to-prospect transition.</p>
+                <p className="text-lg md:text-2xl font-semibold mt-auto">
+                  Managed design process and developed marketing/sales integrations for seamless lead-to-prospect transitions
+                </p>
               </div>
             </div>
           </div>
@@ -97,25 +101,25 @@ export default function Portfolio() {
             </div>
             <h1 className="text-3xl font-semibold flex items-center gap-2">
               John Sanchez
-              <span className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>aka JP</span>
+              <span className={`text-sm text-emerald-800 ${ibmPlexMono.className}`}>aka JP</span>
             </h1>
-            <p className="text-muted-foreground">Web Designer & Next.js Developer</p>
+            <p className={`text-muted-foreground ${ibmPlexMono.className}`}>Web Designer & Next.js Developer</p>
           </div>
 
-          <p className="text-muted-foreground">
+          <p className={`text-muted-foreground ${ibmPlexMono.className}`}>
             I work with entrepreneurs, marketing teams, and brand designers to create custom marketing websites for
             businesses across industries.
           </p>
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="work">
-              <AccordionTrigger>Work Inquiries</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-semibold">Work Inquiries</AccordionTrigger>
               <AccordionContent>
-                Send me a message via <a href="mailto:originaljayp@gmail.com" className="text-emerald-700 hover:text-emerald-600 underline underline-offset-4 transition-colors">email.</a> I respond to all inquiries within 24-48 hours. Upon request, I can provide my resume.
+                Send me a message via <a href="mailto:originaljayp@gmail.com" className="text-emerald-800 hover:text-emerald-600 underline underline-offset-4 transition-colors">email.</a> I respond to all inquiries within 24-48 hours. Upon request, I can provide my resume.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="about">
-              <AccordionTrigger>About Me</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-semibold">About Me</AccordionTrigger>
               <AccordionContent className="space-y-4">
                 <p>👋 Hey, I&apos;m JP. I build web apps, explore backend engineering, and tinker with stock market data. Right now, I&apos;m crafting tools that make workflows smoother—whether it&apos;s dynamic QR codes, job boards, or note-taking apps.</p>
 
@@ -125,7 +129,7 @@ export default function Portfolio() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="testimonials">
-              <AccordionTrigger>Testimonials</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-semibold">Testimonials</AccordionTrigger>
               <AccordionContent>
                 Read what my clients have to say about working with me on various projects.
               </AccordionContent>
@@ -165,7 +169,7 @@ export default function Portfolio() {
       <div className="fixed bottom-6 right-6 md:bottom-6 md:right-6">
         <Badge
           variant="secondary"
-          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-700 text-white`}
+          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-800 text-white`}
         >
           @ogjayp
         </Badge>
