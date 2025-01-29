@@ -66,8 +66,8 @@ export default function Portfolio() {
           <div className="group relative p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
-                alt="Vietnamese food project"
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQxNzfXrgsO0m3I1MibUtCpu4WLf7aXkZqT6jY"
+                alt="Project: American Republic Metals"
                 fill
                 className="object-cover transition-all group-hover:blur-sm"
               />
@@ -81,7 +81,7 @@ export default function Portfolio() {
                     Development
                   </Badge>
                 </div>
-                <p className="text-lg md:text-2xl font-semibold mt-auto">Modern restaurant website with online ordering system</p>
+                <p className="text-lg md:text-2xl font-semibold mt-auto">Managed design process and developed marketing/sales integrations for a seamless lead-to-prospect transition.</p>
               </div>
             </div>
           </div>
@@ -111,13 +111,17 @@ export default function Portfolio() {
             <AccordionItem value="work">
               <AccordionTrigger>Work Inquiries</AccordionTrigger>
               <AccordionContent>
-                Here you can find information about my work and how to get in touch for potential projects.
+                Send me a message via <a href="mailto:originaljayp@gmail.com" className="text-emerald-700 hover:text-emerald-600 underline underline-offset-4 transition-colors">email.</a> I respond to all inquiries within 24-48 hours. Upon request, I can provide my resume.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="about">
               <AccordionTrigger>About Me</AccordionTrigger>
-              <AccordionContent>
-                Learn more about my background, skills, and experience in web design and development.
+              <AccordionContent className="space-y-4">
+                <p>👋 Hey, I'm JP. I build web apps, explore backend engineering, and tinker with stock market data. Right now, I'm crafting tools that make workflows smoother—whether it's dynamic QR codes, job boards, or note-taking apps.</p>
+
+                <p>I'm into <span className="font-semibold">Next.js, Supabase, and cloud hosting</span> (mostly Vercel, but I'm exploring Azure). You'll also find me digging into market microstructure, EV charging infrastructure, and automation.</p>
+
+                <p>Always down to build cool things. Let's connect! 🚀</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="testimonials">
