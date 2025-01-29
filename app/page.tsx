@@ -13,7 +13,7 @@ export default function Portfolio() {
       {/* Left scrollable area */}
       <ScrollArea className="w-full md:w-1/2 h-auto md:h-screen order-2 md:order-1 bg-transparent">
         <div className="p-8 space-y-8">
-          <div className="group relative p-8">
+          <div className="group relative p-0 md:p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               
                 <Image
@@ -40,11 +40,11 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="group relative p-8">
+          <div className="group relative p-0 md:p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
-                alt="Email platform project"
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQQ2WFv47hWrYxdDlbSEN8ofqOvaJ3ZCRtgPKB"
+                alt="Project: ChargeTronix"
                 fill
                 className="object-cover object-top transition-all group-hover:blur-sm"
               />
@@ -52,20 +52,20 @@ export default function Portfolio() {
               <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex gap-2 mb-4">
                   <Badge variant="outline" className="bg-transparent text-white border-white/20">
-                    Brand Design
+                    WordPress Development
                   </Badge>
                   <Badge variant="outline" className="bg-transparent text-white border-white/20">
-                    Website Design
+                    Site Management
                   </Badge>
                 </div>
                 <p className="text-lg md:text-2xl font-semibold mt-auto">
-                  Beautifully crafted email marketing platform with modern design system
+                  Managed a 20+ page WordPress website for ChargeTronix, including content updates, SEO optimization, and site maintenance.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="group relative p-8">
+          <div className="group relative p-0 md:p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQxNzfXrgsO0m3I1MibUtCpu4WLf7aXkZqT6jY"
@@ -94,7 +94,7 @@ export default function Portfolio() {
 
       {/* Right fixed sidebar */}
       <div className="w-full md:w-1/2 md:h-screen md:sticky md:top-0 p-8 flex flex-col order-1 md:order-2">
-        <div className="space-y-8">
+        <div className="space-y-8 m-auto">
           <div className="">
             <div className="relative w-32 h-32 mb-6">
               <Image src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQ912M4xnABscO4Ckn2uw0QqFYIt6NpodWXzmE" alt="Profile photo" fill className="rounded-full object-cover" />
