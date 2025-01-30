@@ -200,7 +200,7 @@ export default function Portfolio() {
 
           <div className="flex gap-4 pt-4">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://x.com/ogjaypee">
+              <Link href="https://x.com/ogjayp">
                 <Twitter className="w-5 h-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
