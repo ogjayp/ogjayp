@@ -15,19 +15,19 @@ import { useState } from "react"
 // Add this testimonial data near the top of the file, before the Portfolio component
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
-    content: "JP delivered exceptional results for our website redesign. His expertise in Next.js and attention to detail made the entire process smooth and efficient.",
-  },
-  {
-    name: "Michael Chen",
-    role: "Founder, EcoCharge",
-    content: "Working with JP was a game-changer for our platform. His understanding of both design and development helped us create a seamless user experience.",
+    name: "Rachael Park",
+    role: "Marketing Director, GlowyJoy",
+    content: "JP is professional, highly responsive, and understands e-commerce and marketing. He built a seamless platform and optimized back-end processes. By updating our site seo, JP helped us increase our visitors by 20%.",
   },
   {
     name: "Rick M.",
-    role: "Founder, American Republic Metals",
-    content: "JP's ability to translate our vision into reality was impressive. His technical skills and communication made the project a success.",
+    role: "President, American Republic Metals",
+    content: "JP's ability to translate our vision into reality was impressive. His technical skills and communication made the project a success. We were able to increase our conversions by 30%.",
+  },
+  {
+    name: "Jon Sandy",
+    role: "Founder, PMCEX",
+    content: "Through JP's expertise, we were able to create a seamless platform that allowed us to manage our inventory and sales more efficiently. His attention to detail and ability to streamline processes were invaluable.",
   },
 ]
 
@@ -119,7 +119,7 @@ export default function Portfolio() {
                   </Badge>
                 </div>
                 <p className="text-lg md:text-2xl font-semibold mt-auto">
-                  Managed design process and developed marketing/sales integrations for seamless lead-to-prospect transitions
+                  Managed design process and developed marketing/sales integrations for seamless lead-to-prospect transitions.
                 </p>
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function Portfolio() {
                       <div className="text-sm text-gray-300">{testimonials[currentTestimonial].role}</div>
                     </CardContent>
                   </Card>
-                  <div className="flex justify-between mt-4">
+                  <div className="flex justify-start mt-4">
                     <Button
                       variant="ghost"
                       size="icon"
