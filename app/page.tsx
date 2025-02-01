@@ -49,7 +49,7 @@ export default function Portfolio() {
       <ScrollArea className="w-full md:w-1/2 h-auto md:h-screen order-2 md:order-1 bg-transparent">
         <div className="p-8 space-y-8">
           <div className="group relative p-0 md:p-8">
-            <div className="relative aspect-video rounded-lg overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
               
                 <Image
                   src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQrFdceWvCKu0MzJkBU4oEXHeSqxWjd6ra1gDO"
@@ -76,7 +76,33 @@ export default function Portfolio() {
           </div>
 
           <div className="group relative p-0 md:p-8">
-            <div className="relative aspect-video rounded-lg overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQpLmlDB3GFw0Hd4vzZqTm62QeOrSVMLb9hluK"
+                alt="Project: Redibit"
+                fill
+                className="object-cover object-top transition-all group-hover:blur-sm"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Next.js Development
+                  </Badge>
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Stripe Integration
+                  </Badge>
+                </div>
+                <p className="text-lg md:text-2xl font-semibold mt-auto">
+                  Developed Next.js app for Redibit, integrating with Stripe and Supabase.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="group relative p-0 md:p-8">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQQ2WFv47hWrYxdDlbSEN8ofqOvaJ3ZCRtgPKB"
                 alt="Project: ChargeTronix"
@@ -101,7 +127,7 @@ export default function Portfolio() {
           </div>
 
           <div className="group relative p-0 md:p-8">
-            <div className="relative aspect-video rounded-lg overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQxNzfXrgsO0m3I1MibUtCpu4WLf7aXkZqT6jY"
                 alt="Project: American Republic Metals"
