@@ -68,7 +68,7 @@ export default function Links() {
             <h2 className="text-xl font-semibold mb-6 text-center">Connect With Me</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <Link href="https://linkedin.com/in/jayp-sanchez" target="_blank">
+              <Link href="https://linkedin.com/in/johnp-sanchez" target="_blank">
                 <Button variant="outline" className="w-full justify-start gap-3 py-5 px-4 hover:bg-emerald-50/50">
                   <Linkedin className="h-5 w-5 text-emerald-800" />
                   <span className="font-medium">LinkedIn</span>
