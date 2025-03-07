@@ -4,10 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
-import { Instagram, Linkedin, Mail, Twitter, Github, ExternalLink } from "lucide-react"
+import { Instagram, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono } from "@/app/_app"
-import { Card, CardContent } from "@/components/ui/card"
+
 
 export default function Links() {
   return (
