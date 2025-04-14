@@ -110,6 +110,14 @@ export default function Links() {
               </Button>
             </Link>
           </div>
+          {/* Wedding Link */}
+          <div className="mt-12 text-center">
+            <Link href="/weddings">
+              <Button className="bg-emerald-800 text-white hover:bg-emerald-900 px-8">
+                Wedding Portfolio
+              </Button>
+            </Link>
+          </div>
         </div>
       </ScrollArea>
     </div>

@@ -1,10 +1,16 @@
 import type { AppProps } from "next/app"
-import { IBM_Plex_Mono } from "next/font/google"
+import { IBM_Plex_Mono, Gilda_Display } from "next/font/google"
 import { cn } from "@/lib/utils"
 
 export const ibmPlexMono = IBM_Plex_Mono({
-  weight: "400",
   subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-ibm-plex-mono",
+})
+
+export const gildaDisplay = Gilda_Display({
+  subsets: ["latin"],
+  weight: ["400"],
 })
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -175,7 +175,7 @@ export default function Portfolio() {
             <AccordionItem value="work">
               <AccordionTrigger className="text-lg font-semibold">Work Inquiries</AccordionTrigger>
               <AccordionContent>
-                Send me a message via <a href="mailto:originaljayp@gmail.com" className="text-emerald-800 hover:text-emerald-600 underline underline-offset-4 transition-colors">email.</a> I respond to all inquiries within 24-48 hours. Upon request, I can provide my resume.
+                Send me a message via <a href="mailto:hello@ogjayp.com" className="text-emerald-800 hover:text-emerald-600 underline underline-offset-4 transition-colors">email.</a> I respond to all inquiries within 24-48 hours. Upon request, I can provide my resume.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="about">
@@ -244,7 +244,7 @@ export default function Portfolio() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:originaljayp@gmail.com">
+              <Link href="mailto:hello@ogjayp.com">
                 <Mail className="w-5 h-5" />
                 <span className="sr-only">Email</span>
               </Link>
