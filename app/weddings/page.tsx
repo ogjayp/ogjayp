@@ -2,9 +2,8 @@
 
 import { Suspense } from "react"
 import Link from "next/link"
-import { ArrowLeft, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import { ibmPlexMono, gildaDisplay } from "../_app"
 import FadeIn from "@/components/fade-in"
 import WeddingGallery from "./wedding-gallery"
@@ -54,7 +53,7 @@ export default function WeddingPortfolio() {
               </div>
               <div className="mt-8 text-center">
                 <h2 className={`text-2xl mb-2 ${gildaDisplay.className}`}>JP & Seongah</h2>
-                <p className={`text-muted-foreground ${ibmPlexMono.className}`}>Wedding Photography Team</p>
+                <p className={`text-muted-foreground ${ibmPlexMono.className}`}>Your Wedding Photography Team</p>
               </div>
             </div>
           </div>
@@ -112,7 +111,7 @@ export default function WeddingPortfolio() {
               <div className="mt-24 text-center">
                 <div className="max-w-3xl mx-auto">
                   <p className="text-xl text-muted-foreground/90 mb-12">
-                    Ready to capture your special day? Book us through New Chapter Film's contact page, and we'll create beautiful memories together.
+                    Ready to capture your special day? Book us through New Chapter Film&apos;s contact page, and we&apos;ll create beautiful memories together.
                   </p>
                   <Link 
                     href="https://newchapterfilms.com/contact" 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { X, ChevronLeft, ChevronRight, Info } from "lucide-react"
+import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface LightboxImage {
@@ -21,7 +21,7 @@ interface LightboxProps {
 
 export default function Lightbox({ images, initialIndex, onClose, weddingTitle, weddingLocation }: LightboxProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex)
-  const [showInfo, setShowInfo] = useState(true)
+  
 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
@@ -36,7 +36,6 @@ export default function Lightbox({ images, initialIndex, onClose, weddingTitle, 
       if (e.key === "Escape") onClose()
       if (e.key === "ArrowLeft") handlePrevious()
       if (e.key === "ArrowRight") handleNext()
-      if (e.key === "i") setShowInfo((prev) => !prev)
     }
 
     document.addEventListener("keydown", handleKeyDown)
