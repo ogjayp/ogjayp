@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
-import { Instagram, Linkedin, Mail, Twitter } from "lucide-react"
+import { Instagram, Linkedin, Mail, Twitter, Terminal } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono } from "@/app/_app"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -247,6 +247,12 @@ export default function Portfolio() {
               <Link href="mailto:hello@ogjayp.com">
                 <Mail className="w-5 h-5" />
                 <span className="sr-only">Email</span>
+              </Link>
+            </Button>
+            <Button variant="outline" size="sm" className="gap-2 h-9 px-3" asChild>
+              <Link href="/blogs">
+                <Terminal className="w-5 h-5" />
+                <span className={ibmPlexMono.className}>Blogs</span>
               </Link>
             </Button>
           </div>

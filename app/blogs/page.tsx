@@ -4,7 +4,8 @@ import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { ibmPlexMono } from "@/app/_app"
-import { Terminal, Gamepad2, Instagram, Twitter } from "lucide-react"
+import { Terminal, Gamepad2, Instagram, Twitter, Linkedin, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 // You can expand this with real blog posts later
 const blogPosts = [
@@ -77,7 +78,7 @@ export default function BlogsPage() {
         ))}
       </div>
 
-      {/* Subtle Social Media CTA */}
+      {/* Social Media CTA - updated to match home page */}
       <div className="border-t border-slate-200 pt-12">
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="flex items-center gap-2 text-muted-foreground">
@@ -87,32 +88,31 @@ export default function BlogsPage() {
             </span>
           </div>
           
-          <div className="flex gap-6">
-            <Link 
-              href="https://instagram.com/ogjayp" 
-              target="_blank"
-              className="group flex flex-col items-center gap-2"
-            >
-              <div className="p-2 rounded-full bg-slate-100 group-hover:bg-slate-200 transition-colors">
-                <Instagram className="w-5 h-5 text-slate-700" />
-              </div>
-              <span className={`text-xs text-muted-foreground ${ibmPlexMono.className}`}>
-                instagram
-              </span>
-            </Link>
-            
-            <Link 
-              href="https://x.com/ogjayp" 
-              target="_blank"
-              className="group flex flex-col items-center gap-2"
-            >
-              <div className="p-2 rounded-full bg-slate-100 group-hover:bg-slate-200 transition-colors">
-                <Twitter className="w-5 h-5 text-slate-700" />
-              </div>
-              <span className={`text-xs text-muted-foreground ${ibmPlexMono.className}`}>
-                twitter
-              </span>
-            </Link>
+          <div className="flex gap-4">
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://x.com/ogjayp" target="_blank">
+                <Twitter className="w-5 h-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://www.linkedin.com/in/johnp-sanchez" target="_blank">
+                <Linkedin className="w-5 h-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://www.instagram.com/ogjayp/" target="_blank">
+                <Instagram className="w-5 h-5" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="mailto:hello@ogjayp.com">
+                <Mail className="w-5 h-5" />
+                <span className="sr-only">Email</span>
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

@@ -29,37 +29,35 @@ export default function BlogLayout({
           <div className="flex justify-between items-start mb-12">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl font-semibold flex items-center gap-3">
-                <span>Blog</span>
+                <span>Blogs</span>
                 <Terminal className="w-8 h-8 text-emerald-800" />
               </h1>
-              <p className={`text-muted-foreground text-lg ${ibmPlexMono.className}`}>
-                Thoughts on web development, tech, and occasional gaming adventures.
-              </p>
+              {isMainBlogPage ? (
+                <p className={`text-muted-foreground text-lg ${ibmPlexMono.className}`}>
+                  Thoughts on web development, tech, and occasional gaming adventures.
+                </p>
+              ) : (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="gap-2 -ml-3 text-muted-foreground hover:text-foreground"
+                  asChild
+                >
+                  <Link href="/blogs">
+                    <ChevronLeft className="w-4 h-4" />
+                    <span className={ibmPlexMono.className}>back to blogs</span>
+                  </Link>
+                </Button>
+              )}
             </div>
             
             <ModeToggle />
           </div>
 
-          {/* Author byline with back button */}
-          <div className="mb-12 flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm">
-              <span>Written by John Sanchez</span>
-              <span className={`text-emerald-800 ${ibmPlexMono.className}`}>aka JP</span>
-            </div>
-            
-            {!isMainBlogPage && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="gap-2 text-muted-foreground hover:text-foreground"
-                asChild
-              >
-                <Link href="/blogs">
-                  <ChevronLeft className="w-4 h-4" />
-                  <span className={ibmPlexMono.className}>back to blog</span>
-                </Link>
-              </Button>
-            )}
+          {/* Author byline */}
+          <div className="mb-12 flex items-center gap-2 text-sm">
+            <span>Written by John Sanchez</span>
+            <span className={`text-emerald-800 ${ibmPlexMono.className}`}>aka JP</span>
           </div>
 
           <article className="prose prose-lg max-w-none dark:prose-invert">

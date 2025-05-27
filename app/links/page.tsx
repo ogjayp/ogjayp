@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
-import { Instagram, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react"
+import { Instagram, Linkedin, Mail, Twitter, ExternalLink, Terminal } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono } from "@/app/_app"
 
@@ -63,6 +63,70 @@ export default function Links() {
             </div>
           </Link>
           
+          {/* Blog Section */}
+          <div className="mt-12">
+            <h2 className="text-xl font-semibold mb-6 text-center">My Blog</h2>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* Read My Blog CTA */}
+              <Link href="/blogs">
+                <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Terminal className="h-5 w-5 text-emerald-800" />
+                      <span className={ibmPlexMono.className}>Blogs</span>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-semibold group-hover:text-emerald-800 transition-colors">
+                        Read My Blog
+                      </h3>
+                      <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
+                        Thoughts on web development, tech, and occasional gaming adventures.
+                      </p>
+                    </div>
+
+                    <div className={`text-sm text-muted-foreground ${ibmPlexMono.className} flex items-center gap-2`}>
+                      <span>View all posts</span>
+                      <ExternalLink className="h-4 w-4 opacity-50" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Latest Blog Post */}
+              <Link href="/blogs/just-one-more-game">
+                <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        
+                        <Badge variant="outline" className="bg-emerald-50/50">
+                          Gaming
+                        </Badge>
+                      </div>
+                      <Badge className="bg-emerald-800 text-white">
+                        Latest
+                      </Badge>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-semibold group-hover:text-emerald-800 transition-colors">
+                        Just One More Game
+                      </h3>
+                      <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
+                        10 losses in a row (it's not that bad).
+                      </p>
+                    </div>
+
+                    <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
+                      May 2025
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
 
           {/* Social Links */}
           <div className="mt-12">
