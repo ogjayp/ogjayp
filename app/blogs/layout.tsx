@@ -7,6 +7,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export default function BlogLayout({
   children,
@@ -17,7 +18,12 @@ export default function BlogLayout({
   const isMainBlogPage = pathname === "/blogs";
 
   return (
-    <>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
       <div className="min-h-screen bg-background transition-colors">
         <div className="max-w-4xl mx-auto px-8 py-12">
           <div className="flex justify-between items-start mb-12">
@@ -71,6 +77,6 @@ export default function BlogLayout({
           @ogjayp
         </Badge>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
