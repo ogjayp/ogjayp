@@ -33,7 +33,7 @@ export default function Links() {
       <ScrollArea className="w-full max-w-3xl mx-auto px-4 pb-12">
         <div className="space-y-4">
           {/* Featured Project */}
-          <h2 className="text-xl font-semibold mb-4 text-center">Featured Project</h2>
+          <h2 className="text-xl font-semibold mb-4 text-center">My Latest Project</h2>
           
           <Link href="https://chipme.app" target="_blank" className="block">
             <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
@@ -62,6 +62,7 @@ export default function Links() {
               </div>
             </div>
           </Link>
+          
 
           {/* Social Links */}
           <div className="mt-12">

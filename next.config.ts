@@ -1,5 +1,11 @@
 import { NextConfig } from 'next'
+import createMDX from '@next/mdx'
  
+/** @type {import('next').NextConfig} */
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+})
+
 const config: NextConfig = {
   images: {
     remotePatterns: [
@@ -10,6 +16,10 @@ const config: NextConfig = {
       },
     ],
   },
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
+  experimental: {
+    viewTransition: true
+  }
 }
  
-export default config
+export default withMDX(config)
