@@ -115,7 +115,7 @@ export default function Links() {
                         Just One More Game
                       </h3>
                       <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
-                        10 losses in a row (it's not that bad).
+                        10 losses in a row (it&apos;s not that bad).
                       </p>
                     </div>
 

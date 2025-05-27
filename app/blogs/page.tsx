@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button"
 const blogPosts = [
   {
     title: "Just One More Game",
-    description: "10 losses in a row (it's not that bad).",
+    description: "10 losses in a row (it&apos;s not that bad).",
     category: "Gaming",
     date: "May 2025",
     icon: <Gamepad2 className="w-5 h-5" />,
