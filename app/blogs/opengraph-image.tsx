@@ -8,14 +8,12 @@ export const size = {
 }
 
 export default async function Image() {
+  // Only load the font weights we actually need
   const ibmPlexMono = await fetch(
     new URL('../../public/fonts/IBMPlexMono-Regular.ttf', import.meta.url)
   ).then((res) => res.arrayBuffer())
 
-  const interMedium = await fetch(
-    new URL('../../public/fonts/Inter_24pt-Medium.ttf', import.meta.url)
-  ).then((res) => res.arrayBuffer())
-
+  // We only need Bold for the title
   const interBold = await fetch(
     new URL('../../public/fonts/Inter_24pt-Bold.ttf', import.meta.url)
   ).then((res) => res.arrayBuffer())
@@ -24,7 +22,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(17, 24, 39) 50%, rgb(5, 46, 22) 100%)',
+          background: 'linear-gradient(135deg, #000 0%, #111827 50%, #052e16 100%)', // Simplified color codes
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -35,33 +33,10 @@ export default async function Image() {
           position: 'relative',
         }}
       >
-        {/* Add a subtle overlay gradient */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'radial-gradient(circle at top right, rgba(5, 150, 105, 0.1), transparent 50%)',
-            zIndex: 0,
-          }}
-        />
-
         {/* Main content wrapper */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '24px',
-            zIndex: 1,
-          }}
-        >
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {/* Title and Icon wrapper */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-            }}
-          >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <h1
               style={{
                 fontSize: '72px',
@@ -70,51 +45,29 @@ export default async function Image() {
                 margin: '0',
                 lineHeight: '1',
                 fontFamily: 'Inter',
-                textShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
               }}
             >
               Blogs
             </h1>
-            <svg
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#059669"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="4 17 10 11 4 5" />
-              <line x1="12" y1="19" x2="20" y2="19" />
+            {/* Simplified SVG */}
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2">
+              <path d="M4 17l6-6-6-6M12 19h8" />
             </svg>
           </div>
 
-          {/* Description */}
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p
-              style={{
-                fontSize: '32px',
-                color: '#94a3b8',
-                margin: '0',
-                fontFamily: 'IBM Plex Mono',
-                lineHeight: '1.4',
-              }}
-            >
-              Thoughts on web development, tech, and
-            </p>
-            <p
-              style={{
-                fontSize: '32px',
-                color: '#94a3b8',
-                margin: '0',
-                fontFamily: 'IBM Plex Mono',
-                lineHeight: '1.4',
-              }}
-            >
-              occasional gaming adventures.
-            </p>
-          </div>
+          {/* Description - Combined into single element */}
+          <p
+            style={{
+              fontSize: '28px',
+              color: '#94a3b8',
+              margin: '0',
+              fontFamily: 'IBM Plex Mono',
+              lineHeight: '1.4',
+              maxWidth: '800px',
+            }}
+          >
+            Thoughts on web development, tech, and occasional gaming adventures.
+          </p>
         </div>
 
         {/* Author tag */}
@@ -129,15 +82,10 @@ export default async function Image() {
             color: 'white',
             fontSize: '24px',
             fontFamily: 'IBM Plex Mono',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           }}
         >
           @ogjayp
         </div>
-
       </div>
     ),
     {
@@ -147,12 +95,6 @@ export default async function Image() {
           name: 'IBM Plex Mono',
           data: ibmPlexMono,
           style: 'normal',
-        },
-        {
-          name: 'Inter',
-          data: interMedium,
-          style: 'normal',
-          weight: 500,
         },
         {
           name: 'Inter',
