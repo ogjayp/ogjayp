@@ -1,4 +1,4 @@
-"use client"
+
 
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
@@ -6,6 +6,25 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ibmPlexMono } from "@/app/_app"
 import { Terminal, Gamepad2, Instagram, Twitter, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+export const metadata = {
+  title: "Blogs | JP Sanchez",
+  description: "Thoughts on web development, tech, and occasional gaming adventures by JP Sanchez, a web developer and Next.js enthusiast.",
+  openGraph: {
+    title: "Blogs | JP Sanchez",
+    description: "Thoughts on web development, tech, and occasional gaming adventures.",
+    type: "website",
+    url: "https://ogjayp.com/blogs",
+    siteName: "@ogjayp",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blogs | JP Sanchez",
+    description: "Thoughts on web development, tech, and occasional gaming adventures.",
+    creator: "@ogjayp",
+  },
+  authors: [{ name: "JP Sanchez", url: "https://ogjayp.com" }],
+}
 
 // You can expand this with real blog posts later
 const blogPosts = [
