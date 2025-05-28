@@ -25,15 +25,15 @@ export default function BlogLayout({
       disableTransitionOnChange
     >
       <div className="min-h-screen bg-background transition-colors">
-        <div className="max-w-4xl mx-auto px-8 py-12">
-          <div className="flex justify-between items-start mb-12">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-semibold flex items-center gap-3">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12">
+          <div className="flex justify-between items-start mb-12 gap-4">
+            <div className="space-y-4 flex-1">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold flex items-center gap-3">
                 <span>Blogs</span>
-                <Terminal className="w-8 h-8 text-emerald-800" />
+                <Terminal className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-800" />
               </h1>
               {isMainBlogPage ? (
-                <p className={`text-muted-foreground text-lg ${ibmPlexMono.className}`}>
+                <p className={`text-muted-foreground text-base sm:text-lg ${ibmPlexMono.className}`}>
                   Thoughts on web development, tech, and occasional gaming adventures.
                 </p>
               ) : (
@@ -51,7 +51,9 @@ export default function BlogLayout({
               )}
             </div>
             
-            <ModeToggle />
+            <div className="flex-shrink-0">
+              <ModeToggle />
+            </div>
           </div>
 
           {/* Author byline */}
