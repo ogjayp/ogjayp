@@ -138,7 +138,7 @@ export default function WeddingPortfolio() {
       <div className="fixed bottom-6 right-6">
         <Badge
           variant="secondary"
-          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-700 text-white`}
+          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-700 hover:bg-emerald-700 text-white`}
         >
           @ogjayp
         </Badge>

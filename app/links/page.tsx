@@ -105,7 +105,7 @@ export default function Links() {
                           Gaming
                         </Badge>
                       </div>
-                      <Badge className="bg-emerald-800 text-white">
+                      <Badge className="bg-emerald-800 hover:bg-emerald-800 text-white">
                         Latest
                       </Badge>
                     </div>

@@ -1,5 +1,3 @@
-
-
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -66,9 +64,9 @@ export default function BlogsPage() {
                     <Badge 
                       variant="secondary" 
                       className={`
-                        ${post.status === 'Latest' ? 'bg-emerald-500 text-white' : 
-                          post.status === 'Draft' ? 'bg-amber-500 text-white' : 
-                          'bg-slate-500 text-white'}
+                        ${post.status === 'Latest' ? 'bg-emerald-500 text-white hover:bg-emerald-500' : 
+                          post.status === 'Draft' ? 'bg-amber-500 text-white hover:bg-amber-500' : 
+                          'bg-slate-500 text-white hover:bg-slate-500'}
                         ${ibmPlexMono.className}
                       `}
                     >

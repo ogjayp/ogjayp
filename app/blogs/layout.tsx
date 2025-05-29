@@ -1,6 +1,5 @@
 "use client"
 
-import { Badge } from "@/components/ui/badge";
 import { ibmPlexMono } from "@/app/_app";
 import { Terminal, ChevronLeft } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -68,15 +67,7 @@ export default function BlogLayout({
         </div>
       </div>
       
-      {/* Floating badge */}
-      <div className="fixed bottom-6 right-6 md:bottom-6 md:right-6">
-        <Badge
-          variant="secondary"
-          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-800 text-white`}
-        >
-          @ogjayp
-        </Badge>
-      </div>
+      
     </ThemeProvider>
   );
 }

@@ -258,15 +258,6 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
-      {/* Floating badge */}
-      <div className="fixed bottom-6 right-6 md:bottom-6 md:right-6">
-        <Badge
-          variant="secondary"
-          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-800 text-white`}
-        >
-          @ogjayp
-        </Badge>
-      </div>
     </div>
   )
 }
