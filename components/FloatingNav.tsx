@@ -41,7 +41,7 @@ export function FloatingNav() {
           sideOffset={6}
           align="end"
         >
-          <div className="grid gap-2 p-2 bg-background/95 backdrop-blur-sm rounded-md border border-border/50">
+          <div className="grid gap-2 p-2 bg-emerald-800/5 dark:bg-emerald-800/10 backdrop-blur-sm rounded-md border border-emerald-800/20">
             <Link 
               href="/"
               target="_blank"
@@ -50,13 +50,15 @@ export function FloatingNav() {
                 select-none rounded-md p-3 
                 leading-none no-underline outline-none 
                 transition-all duration-200
-                hover:bg-emerald-800/10 hover:text-emerald-800
-                focus:bg-emerald-800/10 focus:text-emerald-800
+                ${pathname === '/' 
+                  ? 'bg-emerald-800 text-white cursor-default'
+                  : 'hover:bg-emerald-800/10 hover:text-emerald-800 focus:bg-emerald-800/10 focus:text-emerald-800'
+                }
                 flex items-center justify-between
               `}
             >
               <span>Home</span>
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink className={`h-4 w-4 ${pathname === '/' ? 'text-white' : ''}`} />
             </Link>
             <Link 
               href="/blogs"
@@ -65,8 +67,10 @@ export function FloatingNav() {
                 select-none rounded-md p-3 
                 leading-none no-underline outline-none 
                 transition-all duration-200
-                hover:bg-emerald-800/10 hover:text-emerald-800
-                focus:bg-emerald-800/10 focus:text-emerald-800
+                ${pathname.startsWith('/blogs')
+                  ? 'bg-emerald-800 text-white cursor-default'
+                  : 'hover:bg-emerald-800/10 hover:text-emerald-800 focus:bg-emerald-800/10 focus:text-emerald-800'
+                }
                 flex items-center gap-2
               `}
             >

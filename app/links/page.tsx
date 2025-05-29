@@ -73,8 +73,9 @@ export default function Links() {
                 <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
                   <div className="p-6 space-y-4">
                     <div className="flex items-center gap-2">
-                      <Terminal className="h-5 w-5 text-emerald-800" />
+                      
                       <span className={ibmPlexMono.className}>Blogs</span>
+                      <Terminal className="h-5 w-5 text-emerald-800" />
                     </div>
                     
                     <div className="space-y-2">
