@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/popover"
 import { ibmPlexMono } from "@/app/_app"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 
 export function FloatingNav() {
   const pathname = usePathname()
@@ -40,8 +42,9 @@ export function FloatingNav() {
           align="end"
         >
           <div className="grid gap-2 p-2 bg-background/95 backdrop-blur-sm rounded-md border border-border/50">
-            <a 
+            <Link 
               href="/"
+              target="_blank"
               className={`
                 ${ibmPlexMono.className} 
                 select-none rounded-md p-3 
@@ -49,12 +52,13 @@ export function FloatingNav() {
                 transition-all duration-200
                 hover:bg-emerald-800/10 hover:text-emerald-800
                 focus:bg-emerald-800/10 focus:text-emerald-800
-                flex items-center gap-2
+                flex items-center justify-between
               `}
             >
-              Home
-            </a>
-            <a 
+              <span>Home</span>
+              <ExternalLink className="h-4 w-4" />
+            </Link>
+            <Link 
               href="/blogs"
               className={`
                 ${ibmPlexMono.className} 
@@ -67,7 +71,7 @@ export function FloatingNav() {
               `}
             >
               Blogs
-            </a>
+            </Link>
           </div>
         </PopoverContent>
       </Popover>
