@@ -135,10 +135,24 @@ export default function WeddingPortfolio() {
       </FadeIn>
 
       {/* Floating badge */}
-      <div className="fixed bottom-6 right-6">
+      <div className="fixed bottom-6 right-6 md:bottom-6 md:right-6">
         <Badge
           variant="secondary"
-          className={`px-4 py-2 text-lg ${ibmPlexMono.className} rounded-md bg-emerald-700 hover:bg-emerald-700 text-white`}
+          className={`
+            px-4 py-2 
+            text-lg 
+            ${ibmPlexMono.className} 
+            rounded-md 
+            bg-emerald-800 
+            hover:bg-emerald-800 
+            text-white
+            border-0
+            transition-all
+            duration-200
+            shadow-lg
+            hover:shadow-emerald-800/20
+            font-normal
+          `}
         >
           @ogjayp
         </Badge>
