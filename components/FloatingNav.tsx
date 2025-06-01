@@ -67,7 +67,7 @@ export function FloatingNav() {
                 select-none rounded-md p-3 
                 leading-none no-underline outline-none 
                 transition-all duration-200
-                ${pathname.startsWith('/blogs')
+                ${pathname === '/blogs'
                   ? 'bg-emerald-800 text-white cursor-default'
                   : 'hover:bg-emerald-800/10 hover:text-emerald-800 focus:bg-emerald-800/10 focus:text-emerald-800'
                 }
