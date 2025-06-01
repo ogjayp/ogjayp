@@ -28,7 +28,7 @@ export const metadata = {
 const blogPosts = [
   {
     title: "Just One More Game",
-    description: "10 losses in a row (it's not that bad).",
+    description: "10 losses in a row (it's not that bad). A tale of Overwatch 2.",
     category: "Gaming",
     date: "May 2025",
     icon: <Gamepad2 className="w-5 h-5" />,
