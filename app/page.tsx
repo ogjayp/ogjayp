@@ -181,9 +181,9 @@ export default function Portfolio() {
             <AccordionItem value="about">
               <AccordionTrigger className="text-lg font-semibold">About Me</AccordionTrigger>
               <AccordionContent className="space-y-4">
-                <p>👋 Hey, I&apos;m JP. I build web apps, explore backend engineering, and tinker with stock market data. Right now, I&apos;m crafting tools that make workflows smoother—whether it&apos;s dynamic QR codes, job boards, or note-taking apps.</p>
+                <p>👋 Hey, I&apos;m JP. I build web apps, explore backend engineering, and tinker with stock market data. Right now, I&apos;m crafting tools that make workflows smoother—whether it&apos;s dynamic QR codes, job boards, or photo-sharing apps.</p>
 
-                <p>I&apos;m into <span className="font-semibold">Next.js, Supabase, and cloud hosting</span> (mostly Vercel, but I&apos;m exploring Azure). You&apos;ll also find me digging into market microstructure, EV charging infrastructure, and automation.</p>
+                <p>I&apos;m into <span className="font-semibold">Next.js and cloud hosting</span>. You&apos;ll also find me digging into market microstructure, EV charging infrastructure, and automation.</p>
 
                 <p>Always down to build cool things. Let&apos;s connect! 🚀</p>
               </AccordionContent>
