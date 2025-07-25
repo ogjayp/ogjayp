@@ -168,7 +168,7 @@ export default function Portfolio() {
           </div>
 
           <p className={`text-muted-foreground ${ibmPlexMono.className}`}>
-          I build full-stack web apps and streamline digital marketing automation ⚡️ From custom platforms to seamless integrations, I make workflows faster and more efficient with Next.js, Supabase, and automation.
+          I build full-stack web apps and streamline digital marketing automation ⚡️ From custom platforms to seamless integrations, I make workflows faster and more efficient with Next.js and automation.
           </p>
 
           <Accordion type="single" collapsible className="w-full">
