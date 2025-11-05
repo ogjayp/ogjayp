@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Instagram, Linkedin, Mail, Twitter, ExternalLink, Terminal } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono } from "@/app/_app"
+import { HeartIcon } from "@/components/icons/hearticon"
 
 
 export default function Links() {
@@ -33,14 +34,14 @@ export default function Links() {
       <ScrollArea className="w-full max-w-3xl mx-auto px-4 pb-12">
         <div className="space-y-4">
           {/* Featured Project */}
-          <h2 className="text-xl font-semibold mb-4 text-center">My Latest Project</h2>
+          <h2 className="text-xl font-semibold mb-4 text-center">Building PixelShare</h2>
           
-          <Link href="https://chipme.app" target="_blank" className="block">
+          <Link href="https://pixelshare.app" target="_blank" className="block">
             <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
               <div className="relative aspect-video">
                 <Image
-                  src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQPuL88Q0tgD5oX3v0BAS2dYuKP9QishZbaOzx"
-                  alt="Project: Chipme"
+                  src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQIV7t1M6DC5uSy1kqoeUnQiIfEAOgG8bBJhwj"
+                  alt="Project: PixelShare"
                   fill
                   className="object-cover object-top transition-all group-hover:blur-sm"
                 />
@@ -48,15 +49,15 @@ export default function Links() {
                 <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between">
                   <div className="flex gap-2">
                     <Badge variant="outline" className="bg-transparent text-white border-white/20">
-                      Chat-style Notes
+                      Photo + Video Sharing
                     </Badge>
                     <Badge variant="outline" className="bg-transparent text-white border-white/20">
-                      Chipmunk Emojis
+                      Client Galleries
                     </Badge>
                   </div>
                   <div>
-                    <p className="text-lg md:text-xl font-semibold">🐿️ Chipme</p>
-                    <p className="text-sm opacity-80">Visit chipme.app</p>
+                    <p className="text-lg md:text-xl font-semibold flex items-center gap-2"><HeartIcon className="w-5 h-5" /> PixelShare</p>
+                    <p className="text-sm opacity-80">Visit pixelshare.app</p>
                   </div>
                 </div>
               </div>

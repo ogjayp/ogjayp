@@ -48,6 +48,61 @@ export default function Portfolio() {
       {/* Left scrollable area */}
       <ScrollArea className="w-full md:w-1/2 h-auto md:h-screen order-2 md:order-1 bg-transparent">
         <div className="p-8 space-y-8">
+
+        <div className="group relative p-0 md:p-8">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              
+                <Image
+                  src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQIV7t1M6DC5uSy1kqoeUnQiIfEAOgG8bBJhwj"
+                  alt="Project: PixelShare"
+                  fill
+                  className="object-cover object-top transition-all group-hover:blur-sm"
+                />
+              
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Full-Stack Next.js Development
+                  </Badge>
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    S3 Multipart Uploads
+                  </Badge>
+                </div>
+                <p className="text-lg md:text-2xl font-semibold mt-auto">
+                  Design and development of a full-stack Next.js photo + video sharing platform for PixelShare.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <div className="group relative p-0 md:p-8">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              
+                <Image
+                  src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQgZ4rRYs26pohfI7PsibJCaNG9mv4rBkWcwUe"
+                  alt="Project: Xenoscapers"
+                  fill
+                  className="object-cover object-top transition-all group-hover:blur-sm"
+                />
+              
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Website Design & Development
+                  </Badge>
+                  <Badge variant="outline" className="bg-transparent text-white border-white/20">
+                    Lead Automation
+                  </Badge>
+                </div>
+                <p className="text-lg md:text-2xl font-semibold mt-auto">
+                  Design and development of a Next.js marketing website for Xenoscapers.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="group relative p-0 md:p-8">
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
               
@@ -168,7 +223,7 @@ export default function Portfolio() {
           </div>
 
           <p className={`text-muted-foreground ${ibmPlexMono.className}`}>
-          I build full-stack web apps and streamline digital marketing automation ⚡️ From custom platforms to seamless integrations, I make workflows faster and more efficient with Next.js, Supabase, and automation.
+          I build full-stack web apps and streamline digital marketing automation ⚡️ From custom platforms to seamless integrations, I make workflows faster and more efficient with Next.js, TypeScript, and automation.
           </p>
 
           <Accordion type="single" collapsible className="w-full">
@@ -181,9 +236,9 @@ export default function Portfolio() {
             <AccordionItem value="about">
               <AccordionTrigger className="text-lg font-semibold">About Me</AccordionTrigger>
               <AccordionContent className="space-y-4">
-                <p>👋 Hey, I&apos;m JP. I build web apps, explore backend engineering, and tinker with stock market data. Right now, I&apos;m crafting tools that make workflows smoother—whether it&apos;s dynamic QR codes, job boards, or note-taking apps.</p>
+                <p>👋 Hey, I&apos;m JP. I build web apps, streamline digital marketing automation, and deliver clean user interfaces.</p>
 
-                <p>I&apos;m into <span className="font-semibold">Next.js, Supabase, and cloud hosting</span> (mostly Vercel, but I&apos;m exploring Azure). You&apos;ll also find me digging into market microstructure, EV charging infrastructure, and automation.</p>
+                <p>My expertise lies in <span className="font-semibold">Next.js and site performance optimizations</span>. You&apos;ll also find me running around with my puppy Charlie on my downtime.</p>
 
                 <p>Always down to build cool things. Let&apos;s connect! 🚀</p>
               </AccordionContent>
