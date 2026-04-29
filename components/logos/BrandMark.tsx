@@ -1,6 +1,4 @@
-import Link from "next/link";
-import * as React from "react";
-import { HeartIcon } from "@/components/icons/hearticon";
+import Link from "next/link";import { HeartIcon } from "@/components/icons/hearticon";
 
 type BrandMarkProps = {
   label?: string;
@@ -18,12 +16,6 @@ type BrandMarkProps = {
   sizeRem?: number;
 };
 
-type WrapperProps = {
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-};
-
 export function BrandMark({
   label = "PixelShare",
   href,
@@ -34,15 +26,8 @@ export function BrandMark({
   hideText = false,
   sizeRem,
 }: BrandMarkProps) {
-  const Wrapper: React.FC<WrapperProps> = href
-    ? (props: WrapperProps) => <Link href={href} {...props} />
-    : (props: WrapperProps) => <div {...props} />;
-
-  return (
-    <Wrapper
-      className={`inline-flex items-center gap-[0.5ch] ${className}`}
-      style={sizeRem ? { fontSize: `${sizeRem}rem` } : undefined}
-    >
+  const inner = (
+    <>
       {!hideIcon && (
         <HeartIcon className={`inline-block align-middle w-[1em] h-[1em] ${iconColorClass}`} />
       )}
@@ -54,7 +39,24 @@ export function BrandMark({
           {label}
         </span>
       )}
-    </Wrapper>
+    </>
+  );
+
+  const classNameMerged = `inline-flex items-center gap-[0.5ch] ${className}`;
+  const styleMerged = sizeRem ? { fontSize: `${sizeRem}rem` } : undefined;
+
+  if (href) {
+    return (
+      <Link href={href} className={classNameMerged} style={styleMerged}>
+        {inner}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={classNameMerged} style={styleMerged}>
+      {inner}
+    </div>
   );
 }
 

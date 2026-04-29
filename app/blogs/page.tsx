@@ -99,9 +99,8 @@ export default function BlogsPage() {
       <div className="border-t border-slate-200 pt-12">
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="flex items-center gap-2 text-muted-foreground">
-            <Terminal className="w-4 h-4" />
             <span className={`text-sm ${ibmPlexMono.className}`}>
-              $ find me elsewhere
+              /links
             </span>
           </div>
           
@@ -116,12 +115,6 @@ export default function BlogsPage() {
               <Link href="https://www.linkedin.com/in/johnp-sanchez" target="_blank">
                 <Linkedin className="w-5 h-5" />
                 <span className="sr-only">LinkedIn</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://www.instagram.com/ogjayp/" target="_blank">
-                <Instagram className="w-5 h-5" />
-                <span className="sr-only">Instagram</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>

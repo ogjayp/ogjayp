@@ -1,7 +1,7 @@
 "use client"
 
 import { ibmPlexMono } from "@/app/_app";
-import { Terminal, ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -28,8 +28,7 @@ export default function BlogLayout({
           <div className="flex justify-between items-start mb-12 gap-4">
             <div className="space-y-4 flex-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold flex items-center gap-3">
-                <span>Blogs</span>
-                <Terminal className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-800" />
+                <span>/blogs</span>
               </h1>
               {isMainBlogPage ? (
                 <p className={`text-muted-foreground text-base sm:text-lg ${ibmPlexMono.className}`}>

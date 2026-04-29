@@ -74,7 +74,7 @@ export function FloatingNav() {
                 flex items-center gap-2
               `}
             >
-              Blogs
+              /blogs
             </Link>
           </div>
         </PopoverContent>
