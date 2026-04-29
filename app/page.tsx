@@ -131,7 +131,11 @@ export default function Portfolio() {
         </section>
 
         <section className="space-y-3">
-          <div className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>// what i do</div>
+          <h2
+            className={`m-0 text-xs font-normal leading-tight text-emerald-800 ${ibmPlexMono.className}`}
+          >
+            // what i do
+          </h2>
           <ul className="space-y-2 text-base">
             <li>Ship full-stack apps in Next.js + TypeScript.</li>
             <li>Architect MarTech + RevOps stacks that actually move numbers.</li>
@@ -140,7 +144,11 @@ export default function Portfolio() {
         </section>
 
         <section className="space-y-3">
-          <div className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>// stack</div>
+          <h2
+            className={`m-0 text-xs font-normal leading-tight text-emerald-800 ${ibmPlexMono.className}`}
+          >
+            // stack
+          </h2>
           <div
             className={`flex flex-wrap gap-x-3 gap-y-2 text-sm text-neutral-600 ${ibmPlexMono.className}`}
           >
@@ -151,7 +159,11 @@ export default function Portfolio() {
         </section>
 
         <section className="space-y-6">
-          <div className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>// shipping</div>
+          <h2
+            className={`m-0 text-xs font-normal leading-tight text-emerald-800 ${ibmPlexMono.className}`}
+          >
+            // shipping
+          </h2>
           <div className="space-y-12">
             {projects.map((p) => (
               <article key={p.title} className="group relative space-y-4">
@@ -196,7 +208,11 @@ export default function Portfolio() {
         </section>
 
         <section className="space-y-3">
-          <div className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>// currently</div>
+          <h2
+            className={`m-0 text-xs font-normal leading-tight text-emerald-800 ${ibmPlexMono.className}`}
+          >
+            // currently
+          </h2>
           <ul className={`space-y-2 text-sm text-neutral-700 ${ibmPlexMono.className}`}>
             <li>- shipping martech + product systems @ zero impact energy</li>
             <li>- writing dev + growth notes on /blogs</li>
