@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Linkedin, Mail, Twitter, Terminal, ArrowUpRight } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter, Terminal, ArrowUpRight } from "lucide-react"
 import { ibmPlexMono } from "@/app/_app"
 
 type Project = {
@@ -104,7 +104,16 @@ export default function Portfolio() {
             <div className="leading-tight">
               <div className="font-semibold">John Sanchez</div>
               <div className={`text-sm text-neutral-500 ${ibmPlexMono.className}`}>
-                aka jp · irvine, ca
+                aka jp · irvine, ca ·{" "}
+                <Link
+                  href="https://github.com/ogjayp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-emerald-800 underline underline-offset-4 hover:text-emerald-600 transition-colors"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  github
+                </Link>
               </div>
             </div>
           </div>
