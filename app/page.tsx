@@ -223,7 +223,7 @@ export default function Portfolio() {
             // currently
           </h2>
           <ul className={`space-y-2 text-sm text-neutral-700 ${ibmPlexMono.className}`}>
-            <li>- shipping martech + product systems @ zero impact energy</li>
+            <li>- walking my puppy Charlie</li>
             <li>- writing dev + growth notes on /blogs</li>
             <li>- open to intrapreneurial product / growth-eng roles</li>
           </ul>
@@ -234,6 +234,15 @@ export default function Portfolio() {
             hello@ogjayp.com · irvine, ca
           </div>
           <div className={`flex flex-wrap items-center gap-x-5 gap-y-3 text-sm ${ibmPlexMono.className}`}>
+            <Link
+              href="https://github.com/ogjayp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-600 hover:text-emerald-800 transition-colors flex items-center gap-1.5"
+            >
+              <Github className="w-4 h-4" />
+              <span>github</span>
+            </Link>
             <Link
               href="https://x.com/ogjayp"
               className="text-neutral-600 hover:text-emerald-800 transition-colors flex items-center gap-1.5"

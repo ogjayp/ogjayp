@@ -99,9 +99,12 @@ export default function BlogsPage() {
       <div className="border-t border-slate-200 pt-12">
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="flex items-center gap-2 text-muted-foreground">
-            <span className={`text-sm ${ibmPlexMono.className}`}>
+            <Link
+              href="/links"
+              className={`text-sm hover:text-emerald-700 transition-colors ${ibmPlexMono.className}`}
+            >
               /links
-            </span>
+            </Link>
           </div>
           
           <div className="flex gap-4">

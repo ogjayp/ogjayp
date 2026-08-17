@@ -2,191 +2,171 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Button } from "@/components/ui/button"
-import { Instagram, Linkedin, Mail, Twitter, ExternalLink, Terminal } from "lucide-react"
+import { Instagram, Linkedin, Mail, Twitter, ArrowUpRight, Terminal } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono } from "@/app/_app"
 import { HeartIcon } from "@/components/icons/hearticon"
 
+const socials = [
+  { label: "LinkedIn", href: "https://linkedin.com/in/johnp-sanchez", icon: Linkedin },
+  { label: "Twitter", href: "https://twitter.com/ogjayp", icon: Twitter },
+  { label: "Instagram", href: "https://instagram.com/ogjayp", icon: Instagram },
+  { label: "Email", href: "mailto:hello@ogjayp.com", icon: Mail },
+]
 
 export default function Links() {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-[#fffcf5]">
-      {/* Header with profile */}
-      <div className="w-full max-w-3xl mx-auto pt-12 px-4 text-center mb-16">
-        <div className="relative w-24 h-24 mx-auto mb-4">
-          <Image
-            src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQ912M4xnABscO4Ckn2uw0QqFYIt6NpodWXzmE"
-            alt="Profile"
-            fill
-            className="object-cover rounded-full"
-          />
-        </div>
-        <h1 className="text-3xl font-semibold flex items-center justify-center gap-2">
-          John Sanchez
-          <span className={`text-sm text-emerald-800 ${ibmPlexMono.className}`}>aka JP</span>
-        </h1>
-        <p className={`text-muted-foreground ${ibmPlexMono.className}`}>Web Designer & Next.js Developer</p>
-      </div>
+    <main className="min-h-screen bg-[#fffcf5] text-neutral-900">
+      <div className="mx-auto max-w-md px-5 pt-12 pb-16 space-y-10">
+        {/* Header with profile */}
+        <header className="text-center space-y-3">
+          <div className="relative w-20 h-20 mx-auto">
+            <Image
+              src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQ912M4xnABscO4Ckn2uw0QqFYIt6NpodWXzmE"
+              alt="John Sanchez"
+              fill
+              className="object-cover rounded-full ring-2 ring-emerald-800/20 ring-offset-2 ring-offset-[#fffcf5]"
+            />
+          </div>
+          <div className="space-y-1">
+            <h1 className="text-2xl font-semibold tracking-tight">
+              John Sanchez{" "}
+              <span className={`text-sm text-emerald-800 font-normal ${ibmPlexMono.className}`}>
+                aka jp
+              </span>
+            </h1>
+            <p className={`text-sm text-neutral-500 ${ibmPlexMono.className}`}>
+              Web Designer &amp; Next.js Developer
+            </p>
+          </div>
+        </header>
 
-      {/* Links section */}
-      <ScrollArea className="w-full max-w-3xl mx-auto px-4 pb-12">
-        <div className="space-y-4">
-          {/* Featured Project */}
-          <h2 className="text-xl font-semibold mb-4 text-center">Building PixelShare</h2>
-          
-          <Link href="https://pixelshare.app" target="_blank" className="block">
-            <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
-              <div className="relative aspect-video">
-                <Image
-                  src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQIV7t1M6DC5uSy1kqoeUnQiIfEAOgG8bBJhwj"
-                  alt="Project: PixelShare"
-                  fill
-                  className="object-cover object-top transition-all group-hover:blur-sm"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between">
-                  <div className="flex gap-2">
-                    <Badge variant="outline" className="bg-transparent text-white border-white/20">
-                      Photo + Video Sharing
-                    </Badge>
-                    <Badge variant="outline" className="bg-transparent text-white border-white/20">
-                      Client Galleries
-                    </Badge>
-                  </div>
-                  <div>
-                    <p className="text-lg md:text-xl font-semibold flex items-center gap-2"><HeartIcon className="w-5 h-5" /> PixelShare</p>
-                    <p className="text-sm opacity-80">Visit pixelshare.app</p>
-                  </div>
-                </div>
+        {/* Featured Project */}
+        <section className="space-y-3">
+          <h2 className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>
+            {"// building"}
+          </h2>
+          <Link
+            href="https://pixelshare.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block rounded-xl bg-stone-100 ring-1 ring-neutral-200/60 shadow-[0_2px_24px_-6px_rgba(60,40,10,0.08)] overflow-hidden transition-all active:scale-[0.99] hover:shadow-[0_6px_32px_-6px_rgba(60,40,10,0.16)]"
+          >
+            <div className="relative aspect-[16/10] m-3">
+              <Image
+                src="https://ordpwm1r5u.ufs.sh/f/mSbi2RxqVfoQJVkuWB4AXPlvxVf8yUtEne5sIjwk3dQHBNub"
+                alt="Project: PixelShare"
+                fill
+                sizes="(min-width: 448px) 448px, 100vw"
+                className="object-contain"
+              />
+            </div>
+            <div className="p-4 space-y-2.5">
+              <div className="flex items-center justify-between gap-2">
+                <p className="font-semibold flex items-center gap-2">
+                  <HeartIcon className="w-4 h-4 text-emerald-800" /> PixelShare
+                </p>
+                <ArrowUpRight className="w-4 h-4 text-neutral-400 transition-all group-hover:text-emerald-800 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
+              <div className="flex flex-wrap gap-1.5">
+                <Badge variant="outline" className="bg-emerald-50/50 text-xs font-normal">
+                  Photo + Video Sharing
+                </Badge>
+                <Badge variant="outline" className="bg-emerald-50/50 text-xs font-normal">
+                  Client Galleries
+                </Badge>
+              </div>
+              <p className={`text-xs text-neutral-500 ${ibmPlexMono.className}`}>
+                pixelshare.app
+              </p>
             </div>
           </Link>
-          
-          {/* Blog Section */}
-          <div className="mt-12">
-            <h2 className="text-xl font-semibold mb-6 text-center">My Blog</h2>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              {/* Read My Blog CTA */}
-              <Link href="/blogs">
-                <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-center gap-2">
-                      
-                      <span className={ibmPlexMono.className}>Blogs</span>
-                      <Terminal className="h-5 w-5 text-emerald-800" />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <h3 className="text-lg font-semibold group-hover:text-emerald-800 transition-colors">
-                        Read My Blog
-                      </h3>
-                      <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
-                        Thoughts on web development, tech, and occasional gaming adventures.
-                      </p>
-                    </div>
+        </section>
 
-                    <div className={`text-sm text-muted-foreground ${ibmPlexMono.className} flex items-center gap-2`}>
-                      <span>View all posts</span>
-                      <ExternalLink className="h-4 w-4 opacity-50" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
+        {/* Blog */}
+        <section className="space-y-3">
+          <h2 className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>
+            {"// blog"}
+          </h2>
 
-              {/* Latest Blog Post */}
-              <Link href="/blogs/just-one-more-game">
-                <div className="group relative rounded-lg overflow-hidden transition-all border-2 border-emerald-800/20 hover:border-emerald-800/40">
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        
-                        <Badge variant="outline" className="bg-emerald-50/50">
-                          Gaming
-                        </Badge>
-                      </div>
-                      <Badge className="bg-emerald-800 hover:bg-emerald-800 text-white">
-                        Latest
-                      </Badge>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <h3 className="text-lg font-semibold group-hover:text-emerald-800 transition-colors">
-                        Just One More Game
-                      </h3>
-                      <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
-                        10 losses in a row (it&apos;s not that bad).
-                      </p>
-                    </div>
-
-                    <p className={`text-sm text-muted-foreground ${ibmPlexMono.className}`}>
-                      May 2025
-                    </p>
-                  </div>
-                </div>
-              </Link>
+          <Link
+            href="/blogs/just-one-more-game"
+            className="group block rounded-xl bg-white/60 ring-1 ring-neutral-200/60 p-4 space-y-2 transition-all active:scale-[0.99] hover:ring-emerald-800/30"
+          >
+            <div className="flex items-center justify-between gap-2">
+              <Badge variant="outline" className="bg-emerald-50/50 text-xs font-normal">
+                Gaming
+              </Badge>
+              <Badge className="bg-emerald-800 hover:bg-emerald-800 text-white text-xs">
+                Latest
+              </Badge>
             </div>
-          </div>
+            <h3 className="font-semibold group-hover:text-emerald-800 transition-colors">
+              Just One More Game
+            </h3>
+            <p className={`text-sm text-neutral-500 ${ibmPlexMono.className}`}>
+              10 losses in a row (it&apos;s not that bad). · May 2025
+            </p>
+          </Link>
 
-          {/* Social Links */}
-          <div className="mt-12">
-            <h2 className="text-xl font-semibold mb-6 text-center">Connect With Me</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <Link href="https://linkedin.com/in/johnp-sanchez" target="_blank">
-                <Button variant="outline" className="w-full justify-start gap-3 py-5 px-4 hover:bg-emerald-50/50">
-                  <Linkedin className="h-5 w-5 text-emerald-800" />
-                  <span className="font-medium">LinkedIn</span>
-                  <ExternalLink className="h-4 w-4 ml-auto opacity-50" />
-                </Button>
+          <Link
+            href="/blogs"
+            className={`group flex items-center justify-between rounded-xl ring-1 ring-neutral-200/60 px-4 py-3.5 text-sm transition-all active:scale-[0.99] hover:ring-emerald-800/30 ${ibmPlexMono.className}`}
+          >
+            <span className="flex items-center gap-2 text-neutral-700 group-hover:text-emerald-800 transition-colors">
+              <Terminal className="w-4 h-4 text-emerald-800" />
+              View all posts
+            </span>
+            <ArrowUpRight className="w-4 h-4 text-neutral-400 transition-all group-hover:text-emerald-800 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </section>
+
+        {/* Social Links */}
+        <section className="space-y-3">
+          <h2 className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>
+            {"// connect"}
+          </h2>
+          <div className="grid grid-cols-2 gap-3">
+            {socials.map(({ label, href, icon: Icon }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 rounded-xl ring-1 ring-neutral-200/60 px-4 py-3.5 text-sm font-medium transition-all active:scale-[0.98] hover:ring-emerald-800/30 hover:bg-emerald-50/50"
+              >
+                <Icon className="w-4 h-4 text-emerald-800 shrink-0" />
+                {label}
               </Link>
-              
-              <Link href="https://twitter.com/ogjayp" target="_blank">
-                <Button variant="outline" className="w-full justify-start gap-3 py-5 px-4 hover:bg-emerald-50/50">
-                  <Twitter className="h-5 w-5 text-emerald-800" />
-                  <span className="font-medium">Twitter</span>
-                  <ExternalLink className="h-4 w-4 ml-auto opacity-50" />
-                </Button>
-              </Link>
-              
-              <Link href="https://instagram.com/ogjayp" target="_blank">
-                <Button variant="outline" className="w-full justify-start gap-3 py-5 px-4 hover:bg-emerald-50/50">
-                  <Instagram className="h-5 w-5 text-emerald-800" />
-                  <span className="font-medium">Instagram</span>
-                  <ExternalLink className="h-4 w-4 ml-auto opacity-50" />
-                </Button>
-              </Link>
-              
-              <Link href="mailto:hello@ogjayp.com" target="_blank">
-                <Button variant="outline" className="w-full justify-start gap-3 py-5 px-4 hover:bg-emerald-50/50">
-                  <Mail className="h-5 w-5 text-emerald-800" />
-                  <span className="font-medium">Email</span>
-                  <ExternalLink className="h-4 w-4 ml-auto opacity-50" />
-                </Button>
-              </Link>
-            </div>
+            ))}
           </div>
-          
-          {/* Portfolio Link */}
-          <div className="mt-12 text-center">
-            <Link href="/">
-              <Button className="bg-emerald-800 text-white hover:bg-emerald-900 px-8">
-                View Full Portfolio
-              </Button>
+        </section>
+
+        {/* More */}
+        <section className="space-y-3">
+          <h2 className={`text-xs text-emerald-800 ${ibmPlexMono.className}`}>
+            {"// more"}
+          </h2>
+          <div className="space-y-3">
+            <Link
+              href="/"
+              className="flex items-center justify-center rounded-xl bg-emerald-800 text-white font-medium py-3.5 transition-all active:scale-[0.98] hover:bg-emerald-900"
+            >
+              Homepage
+            </Link>
+            <Link
+              href="/weddings"
+              className="flex items-center justify-center rounded-xl ring-1 ring-emerald-800/30 text-emerald-800 font-medium py-3.5 transition-all active:scale-[0.98] hover:bg-emerald-50/50"
+            >
+              Wedding Portfolio
             </Link>
           </div>
-          {/* Wedding Link */}
-          <div className="mt-12 text-center">
-            <Link href="/weddings">
-              <Button className="bg-emerald-800 text-white hover:bg-emerald-900 px-8">
-                Wedding Portfolio
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </ScrollArea>
-    </div>
+        </section>
+
+        <footer className={`text-center text-xs text-neutral-400 ${ibmPlexMono.className}`}>
+          hello@ogjayp.com · irvine, ca
+        </footer>
+      </div>
+    </main>
   )
-} 
+}
