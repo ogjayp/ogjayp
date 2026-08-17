@@ -17,9 +17,6 @@ const config: NextConfig = {
     ],
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
-  experimental: {
-    viewTransition: true
-  }
 }
  
 export default withMDX(config)

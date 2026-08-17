@@ -1,12 +1,11 @@
 "use client"
 
 import { Suspense } from "react"
-import Link from "next/link"
-import { ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ibmPlexMono, gildaDisplay } from "../_app"
 import FadeIn from "@/components/fade-in"
 import WeddingGallery from "./wedding-gallery"
+import WeddingContactForm from "./wedding-contact-form"
 import Image from "next/image"
 
 export default function WeddingPortfolio() {
@@ -111,22 +110,9 @@ export default function WeddingPortfolio() {
               <div className="mt-24 text-center">
                 <div className="max-w-3xl mx-auto">
                   <p className="text-xl text-muted-foreground/90 mb-12">
-                    Ready to capture your special day? Book us through New Chapter Film&apos;s contact page, and we&apos;ll create beautiful memories together.
+                    Ready to capture your special day? Send a note and we&apos;ll get back to you.
                   </p>
-                  <Link 
-                    href="https://newchapterfilms.com/contact" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 text-xl text-emerald-800 hover:text-emerald-900 transition-all group"
-                  >
-                    <span className={`relative ${gildaDisplay.className}
-                      after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-full 
-                      after:h-px after:bg-emerald-800/30 after:transition-all after:duration-300
-                      group-hover:after:h-[3px] group-hover:after:bg-emerald-800/50`}>
-                      Get in Touch
-                    </span>
-                    <ExternalLink className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  <WeddingContactForm />
                 </div>
               </div>
             </div>

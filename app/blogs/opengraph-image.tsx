@@ -1,6 +1,7 @@
+import { readFile } from 'node:fs/promises'
+import { join } from 'node:path'
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
 export const alt = 'JP Sanchez - Blog'
 export const size = {
   width: 1200,
@@ -8,15 +9,10 @@ export const size = {
 }
 
 export default async function Image() {
-  // Only load the font weights we actually need
-  const ibmPlexMono = await fetch(
-    new URL('../../public/fonts/IBMPlexMono-Regular.ttf', import.meta.url)
-  ).then((res) => res.arrayBuffer())
-
-  // We only need Bold for the title
-  const interBold = await fetch(
-    new URL('../../public/fonts/Inter_24pt-Bold.ttf', import.meta.url)
-  ).then((res) => res.arrayBuffer())
+  const [ibmPlexMono, interBold] = await Promise.all([
+    readFile(join(process.cwd(), 'public/fonts/IBMPlexMono-Regular.ttf')),
+    readFile(join(process.cwd(), 'public/fonts/Inter_24pt-Bold.ttf')),
+  ])
 
   return new ImageResponse(
     (
